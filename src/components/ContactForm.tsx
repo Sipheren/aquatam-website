@@ -18,10 +18,8 @@ export default function ContactForm() {
     e.preventDefault();
     setStatus("loading");
 
-    // For static export, use Formspree or similar service
-    // Replace YOUR_FORM_ID with your actual Formspree form ID
     try {
-      const response = await fetch("https://formspree.io/f/YOUR_FORM_ID", {
+      const response = await fetch("https://formspree.io/f/xregozlj", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
