@@ -9,7 +9,7 @@ export const siteConfig = {
     ben: "ben@aquatam.com.au",
   },
   location: "Tamworth, NSW",
-  serviceRadius: "300km",
+  serviceRadius: "320km",
   foundedYear: 1998,
   coverageAreas: ["Tamworth","Gunnedah","Narrabri","Wee Waa","Coonabarabran","Inverell","Moree","Armidale","Glen Innes","Muswellbrook","Scone","Singleton","Denman","Merriwa"],
   supportedBrands: ["Taylex","BioCycle","BioSeptic","Earthsafe","Krystal Kleer","Ozzie Kleen","Aquanova","Garden Master"],
