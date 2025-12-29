@@ -1,0 +1,72 @@
+GOOGLE SHEET TEMPLATE - Copy this to create your sheet
+====================================================
+
+Create a new Google Sheet with 5 tabs named exactly as shown below:
+
+TAB 1: Site Config
+------------------
+Headers: key | value
+
+key                 | value
+--------------------|--------------------------------------------------------
+name                | Aquatam Waste Water
+tagline             | Professional AWTS Services Since 1998
+description         | Aquatam provides expert maintenance and servicing of Aerated Wastewater Treatment Systems (AWTS) within a 300km radius of Tamworth, NSW.
+phone               | 0438 603 852
+email               | ben@aquatam.com.au
+location            | Tamworth, NSW
+serviceRadius       | 300km
+foundedYear         | 1998
+coverageAreas       | Tamworth,Gunnedah,Narrabri,Wee Waa,Coonabarabran,Inverell,Moree,Armidale,Glen Innes,Muswellbrook,Scone,Singleton,Denman,Merriwa
+supportedBrands     | Taylex,BioCycle,BioSeptic,Earthsafe,Krystal Kleer,Ozzie Kleen,Aquanova,Garden Master
+
+TAB 2: Services
+---------------
+Headers: title | description | icon | link
+
+title                   | description                                                                                  | icon      | link
+------------------------|----------------------------------------------------------------------------------------------|-----------|----------
+AWTS Servicing          | Regular maintenance services to keep your system running efficiently. 90-day intervals.      | wrench    | /services
+System Repairs          | Expert diagnosis and repair of all AWTS units. Fast response times and quality parts.        | tool      | /services
+New Installations       | Professional installation of new AWTS systems. Full site assessment and council compliance.  | home      | /installs
+System Inspections      | Comprehensive inspections for council compliance, property sales, or peace of mind.          | clipboard | /services
+
+TAB 3: FAQ
+----------
+Headers: question | answer
+
+question                              | answer
+--------------------------------------|-----------------------------------------------------------------------------------------
+How often should my AWTS be serviced? | Your AWTS should be serviced every 3 months (90 days) as per NSW requirements. Regular servicing ensures optimal performance and prevents costly repairs.
+What areas do you service?            | We service all AWTS units within a 300km radius of Tamworth, including Gunnedah, Narrabri, Armidale, Moree, and surrounding areas.
+What brands do you service?           | We service all major AWTS brands including Taylex, BioCycle, BioSeptic, Earthsafe, Krystal Kleer, Ozzie Kleen, Aquanova, and Garden Master.
+Can you help with council compliance? | Yes, we provide detailed inspection reports for council compliance, property sales, or your own records. Our services meet all council and state water authority requirements.
+How do I book a service?              | You can call us directly on 0438 603 852 (Ben), or use the contact form on our website. We'll arrange a convenient time for your service.
+
+TAB 4: Team
+-----------
+Headers: name | role | phone | email | image | bio
+
+name        | role                                    | phone         | email                | image           | bio
+------------|-----------------------------------------|---------------|----------------------|-----------------|-----------------------------------------------
+Ben Glover  | Service Tech, Repairs, Quotes & Installs | 0438 603 852 | ben@aquatam.com.au   | /images/ben.jpg | Expert technician specializing in AWTS servicing, repairs, installations, and quotes.
+
+TAB 5: Pricing
+--------------
+Headers: service | price
+
+service                      | price
+-----------------------------|------------------------
+Regular 90-Day Service       | From $85
+System Repairs               | Quote on inspection
+New Installation Quote       | Free
+Compliance Inspection        | Contact for pricing
+
+AFTER CREATING THE SHEET:
+==========================
+1. Go to File → Share → Publish to web
+2. Select "Entire Document"
+3. Choose "Comma-separated values (.csv)"
+4. Click "Publish"
+5. Copy the Sheet ID from the URL (between /d/ and /edit)
+6. Add the Sheet ID to GitHub Secrets as GOOGLE_SHEET_ID
