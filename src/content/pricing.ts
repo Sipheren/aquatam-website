@@ -5,19 +5,19 @@ export interface PricingItem {
 
 export const pricing: PricingItem[] = [
   {
-    service: "Regular 90-Day Service",
-    price: "From $85"
+    "service": "Regular 90-Day Service",
+    "price": "From $85"
   },
   {
-    service: "System Repairs",
-    price: "Quote on inspection"
+    "service": "System Repairs",
+    "price": "Quote on inspection"
   },
   {
-    service: "New Installation Quote",
-    price: "Free"
+    "service": "New Installation Quote",
+    "price": "Free"
   },
   {
-    service: "Compliance Inspection",
-    price: "Contact for pricing"
+    "service": "Compliance Inspection",
+    "price": "Contact for pricing"
   }
 ];

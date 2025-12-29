@@ -82,9 +82,6 @@ export default function ServiceCard({ service }: ServiceCardProps) {
       </div>
       <h3 className="mb-2 text-xl font-bold text-charcoal">{service.title}</h3>
       <p className="mb-4 text-gray-text">{service.description}</p>
-      {service.price && (
-        <p className="font-semibold text-primary">{service.price}</p>
-      )}
     </div>
   );
 }

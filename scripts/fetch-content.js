@@ -4,10 +4,12 @@ const Papa = require('papaparse');
 
 // Google Sheets ID - Replace with your actual sheet ID
 const SHEET_ID = process.env.GOOGLE_SHEET_ID || 'YOUR_SHEET_ID_HERE';
+// Published sheet ID (from /pub URL)
+const PUBLISHED_SHEET_ID = '2PACX-1vT8mzcpXFgzCn2qxQX27lbmmGjUtYrEmvHm_YOHjLFzpo9yjlvMsYtX_4qf76EZ98wZS9iGUHwLkJCF';
 
 // Function to fetch CSV from Google Sheets
 async function fetchSheet(gid) {
-  const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=${gid}`;
+  const url = `https://docs.google.com/spreadsheets/d/e/${PUBLISHED_SHEET_ID}/pub?gid=${gid}&single=true&output=csv`;
   const response = await fetch(url);
   const csv = await response.text();
   return Papa.parse(csv, { header: true, skipEmptyLines: true }).data;
@@ -16,7 +18,7 @@ async function fetchSheet(gid) {
 // Generate siteConfig.ts
 async function generateSiteConfig() {
   console.log('📄 Fetching Site Config...');
-  const data = await fetchSheet('0'); // First sheet (gid=0)
+  const data = await fetchSheet('0'); // Site Config sheet (gid=0)
 
   const config = data.reduce((acc, row) => {
     if (row.key && row.value) {
@@ -53,7 +55,7 @@ async function generateSiteConfig() {
 // Generate services.ts
 async function generateServices() {
   console.log('📄 Fetching Services...');
-  const data = await fetchSheet('1'); // Second sheet (gid=1)
+  const data = await fetchSheet('826896158'); // Services sheet
 
   const services = data.filter(row => row.title).map(row => ({
     title: row.title,
@@ -92,7 +94,7 @@ export const serviceFeatures = [
 // Generate FAQ
 async function generateFAQ() {
   console.log('📄 Fetching FAQ...');
-  const data = await fetchSheet('2'); // Third sheet (gid=2)
+  const data = await fetchSheet('151879972'); // FAQ sheet
 
   const faq = data.filter(row => row.question).map(row => ({
     question: row.question,
@@ -117,7 +119,7 @@ export const faqs: FAQ[] = ${JSON.stringify(faq, null, 2)};
 // Generate Team
 async function generateTeam() {
   console.log('📄 Fetching Team...');
-  const data = await fetchSheet('3'); // Fourth sheet (gid=3)
+  const data = await fetchSheet('1250237035'); // Team sheet
 
   const team = data.filter(row => row.name).map(row => ({
     name: row.name,
@@ -150,7 +152,7 @@ export const team: TeamMember[] = ${JSON.stringify(team, null, 2)};
 // Generate Pricing
 async function generatePricing() {
   console.log('📄 Fetching Pricing...');
-  const data = await fetchSheet('4'); // Fifth sheet (gid=4)
+  const data = await fetchSheet('1916629172'); // Pricing sheet
 
   const pricing = data.filter(row => row.service).map(row => ({
     service: row.service,

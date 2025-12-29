@@ -24,7 +24,7 @@ export default function Home() {
 
             <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {services.map((service) => (
-                <ServiceCard key={service.id} service={service} />
+                <ServiceCard key={service.title} service={service} />
               ))}
             </div>
 
