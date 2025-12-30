@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import ServiceCard from "@/components/ServiceCard";
 import { siteConfig } from "@/content/siteConfig";
 import { services, serviceFeatures } from "@/content/services";
@@ -76,20 +77,19 @@ export default function ServicesPage() {
               </h2>
               <p className="mb-6 text-gray-text">
                 We service all AWTS units within a {siteConfig.serviceRadius}{" "}
-                radius of {siteConfig.location}, including:
+                radius of {siteConfig.location}.
               </p>
-              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-                {siteConfig.coverageAreas.map((area) => (
-                  <div
-                    key={area}
-                    className="rounded-lg bg-white px-4 py-2 text-center text-sm shadow-sm"
-                  >
-                    {area}
-                  </div>
-                ))}
+              <div className="rounded-xl overflow-hidden shadow-lg">
+                <Image
+                  src="/images/service-area.png"
+                  alt="Aquatam service area coverage map showing 300km radius from Tamworth"
+                  width={800}
+                  height={600}
+                  className="w-full h-auto"
+                />
               </div>
               <p className="mt-6 text-sm text-gray-text">
-                Don&apos;t see your area listed? Contact us to confirm coverage.
+                Don&apos;t see your area on the map? Contact us to confirm coverage.
               </p>
             </div>
           </div>
