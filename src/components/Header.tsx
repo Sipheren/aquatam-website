@@ -38,8 +38,14 @@ export default function Header() {
             {/* Contact Info - Desktop */}
             <div className="hidden lg:flex lg:flex-col lg:items-end lg:justify-center">
               <h3 className="text-base font-bold text-primary mb-1">Contact Us:</h3>
-              <div className="text-sm text-charcoal">
+              <div className="text-sm text-charcoal flex flex-col items-end">
                 <div className="font-semibold">Ben Glover: {siteConfig.phone.ben}</div>
+                <a href="mailto:ben@aquatam.com.au" className="text-gray-text hover:text-primary">
+                  ben@aquatam.com.au
+                </a>
+                <a href="mailto:admin@aquatam.com.au" className="text-gray-text hover:text-primary">
+                  admin@aquatam.com.au
+                </a>
               </div>
             </div>
           </div>

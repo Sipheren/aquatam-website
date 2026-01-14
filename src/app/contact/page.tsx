@@ -122,6 +122,54 @@ export default function ContactPage() {
                     </div>
                   </div>
                 ))}
+
+                {/* Admin Contact */}
+                <div className="rounded-xl border border-gray-100 bg-gray-50 p-6 shadow-sm">
+                  <div className="flex items-start">
+                    <div className="mr-4 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-primary/10">
+                      <svg
+                        className="h-6 w-6 text-primary"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                        />
+                      </svg>
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-charcoal">Admin Contact</h3>
+                      <p className="mb-3 text-sm text-primary">
+                        Accounts, questions and all administration requests
+                      </p>
+                      <div className="space-y-2">
+                        <a
+                          href="mailto:admin@aquatam.com.au"
+                          className="flex items-center text-gray-text hover:text-primary transition-colors"
+                        >
+                          <svg
+                            className="mr-2 h-4 w-4"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                            />
+                          </svg>
+                          admin@aquatam.com.au
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
 
               {/* Service Area */}

@@ -64,6 +64,14 @@ export default function Footer() {
                   </a>
                 </li>
               ))}
+              <li className="text-sm pt-2">
+                <a
+                  href="mailto:admin@aquatam.com.au"
+                  className="text-gray-300 hover:text-white"
+                >
+                  admin@aquatam.com.au
+                </a>
+              </li>
             </ul>
           </div>
 
