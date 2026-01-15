@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import { siteConfig } from "@/content/siteConfig";
 import { team } from "@/content/team";
@@ -17,6 +18,13 @@ export default function ContactPage() {
         <div className="container-custom">
           <div className="bg-white rounded-3xl shadow-xl p-8 lg:p-12">
             <div className="mx-auto max-w-3xl text-center">
+              <Image
+                src="/images/logo-square.png"
+                alt="Aquatam Waste Water Logo"
+                width={100}
+                height={100}
+                className="mx-auto h-24 w-auto mb-6"
+              />
               <h1 className="mb-4 text-4xl font-bold sm:text-5xl text-charcoal">Contact Us</h1>
               <p className="text-lg text-gray-text">
                 Get in touch for service bookings, quotes, or any questions about

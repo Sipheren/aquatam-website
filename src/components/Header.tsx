@@ -26,7 +26,7 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center">
               <Image
-                src="/images/logo.jpg"
+                src="/images/logo-wide.png"
                 alt="Aquatam Waste Water Logo"
                 width={300}
                 height={90}

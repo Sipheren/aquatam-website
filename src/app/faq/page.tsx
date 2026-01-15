@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import FAQ from "@/components/FAQ";
 import { siteConfig } from "@/content/siteConfig";
 import { faqs } from "@/content/faq";
@@ -18,6 +19,13 @@ export default function FAQPage() {
         <div className="container-custom">
           <div className="bg-white rounded-3xl shadow-xl p-8 lg:p-12">
             <div className="mx-auto max-w-3xl text-center">
+              <Image
+                src="/images/logo-square.png"
+                alt="Aquatam Waste Water Logo"
+                width={100}
+                height={100}
+                className="mx-auto h-24 w-auto mb-6"
+              />
               <h1 className="mb-4 text-4xl font-bold sm:text-5xl text-charcoal">
                 Frequently Asked Questions
               </h1>

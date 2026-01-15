@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/content/siteConfig";
 import { team } from "@/content/team";
 
@@ -14,16 +15,28 @@ export default function Footer() {
   return (
     <footer className="bg-charcoal text-white">
       <div className="container-custom py-12">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-[1fr_6rem_1fr_1fr_1fr]">
           {/* About */}
           <div>
-            <h3 className="mb-4 text-lg font-bold">{siteConfig.name}</h3>
+            <div className="mb-4 flex items-center gap-3">
+              <Image
+                src="/images/logo-square.png"
+                alt="Aquatam Waste Water Logo"
+                width={80}
+                height={80}
+                className="h-20 w-auto flex-shrink-0"
+              />
+              <h3 className="text-lg font-bold leading-tight">{siteConfig.name}</h3>
+            </div>
             <p className="text-sm text-gray-300">
               Locally owned and operated since {siteConfig.foundedYear}. We
               service all Aerated Wastewater Treatment Systems within a{" "}
               {siteConfig.serviceRadius} radius of {siteConfig.location}.
             </p>
           </div>
+
+          {/* Spacer */}
+          <div></div>
 
           {/* Quick Links */}
           <div>
